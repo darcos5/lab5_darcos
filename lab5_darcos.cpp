@@ -10,16 +10,20 @@ using namespace std;
 
 int main()
 {
-  int maxDigit;
+    return main();
+}
+int main()
+{
+    int maxDigit;
 
-  cout << "Please enter the maximum digit for the multiplication table." << endl;
-  cout << "The digit must be greater than 4 and less than 10." << endl;
-  cout << "Max Digit: ";
-  getMaxDigitInput(maxDigit);
+    cout << "Please enter the maximum digit for the multiplication table." << endl;
+    cout << "The digit must be greater than 4 and less than 10." << endl;
+    cout << "Max Digit: ";
+    getMaxDigitInput(maxDigit);
 
-  printMultiplicationTable(maxDigit);
+    printMultiplicationTable(maxDigit);
 
-  return 0;
+    return 0;
 }
 void printMultiplicationTable(int maxDigit)
 {
