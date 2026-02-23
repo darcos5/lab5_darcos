@@ -18,12 +18,8 @@ int main()
   cin >> maxDigit;
 
   //input validation loop
-  //still need to add condition for non integer values 
-  while (maxDigit <= 4 || maxDigit >= 10) {
-      printInputValidationError();
-      cout << "Max Digit: ";
-      cin >> maxDigit;
-  }
+  //still need to add condition for non integer values
+  isMaxDigitValid(maxDigit);
 
   for (int i = 1; i <= maxDigit; i++) {
     for (int j = 1; j <= maxDigit; j++) {
@@ -33,6 +29,15 @@ int main()
   }
 
   return 0;
+}
+bool isMaxDigitValid(int maxDigit)
+{
+    while (maxDigit <= 4 || maxDigit >= 10)
+    {
+        printInputValidationError();
+        cout << "Max Digit: ";
+        cin >> maxDigit;
+    }
 }
 void printInputValidationError()
 {
