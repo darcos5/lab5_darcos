@@ -5,6 +5,7 @@
  * @brief a program to generate a multiplication table with valid user input and refactorized 
  */
 #include<iostream>
+#include "lab5_darcos.h"
 using namespace std;
 
 int main()
@@ -19,9 +20,9 @@ int main()
   //input validation loop
   //still need to add condition for non integer values 
   while (maxDigit <= 4 || maxDigit >= 10) {
-    cout << "Error: The max digit must be greater than 4 and less than 10. Please try again." << endl;
-    cout << "Max Digit: ";
-    cin >> maxDigit;
+      printInputValidationError();
+      cout << "Max Digit: ";
+      cin >> maxDigit;
   }
 
   for (int i = 1; i <= maxDigit; i++) {
@@ -32,4 +33,8 @@ int main()
   }
 
   return 0;
+}
+void printInputValidationError()
+{
+    cout << "Error: The max digit must be greater than 4 and less than 10. Please try again." << endl;
 }
