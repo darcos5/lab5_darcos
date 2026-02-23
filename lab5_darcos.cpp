@@ -17,14 +17,20 @@ int main()
   cout << "Max Digit: ";
   getMaxDigitInput(maxDigit);
 
-  for (int i = 1; i <= maxDigit; i++) {
-    for (int j = 1; j <= maxDigit; j++) {
-      cout << i * j << "\t";
-    }
-    cout << endl;
-  }
+  printMultiplicationTable(maxDigit);
 
   return 0;
+}
+void printMultiplicationTable(int maxDigit)
+{
+    for (int i = 1; i <= maxDigit; i++)
+    {
+        for (int j = 1; j <= maxDigit; j++)
+        {
+            cout << i * j << "\t";
+        }
+        cout << endl;
+    }
 }
 int getMaxDigitInput()
 {
