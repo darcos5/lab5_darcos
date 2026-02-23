@@ -12,6 +12,11 @@ int main()
 {
     return main();
 }
+/**
+ * @brief Beginning of the program. 
+ * @param None
+ * @return 0 to indicate success. 
+ */
 int main()
 {
     int maxDigit;
@@ -25,6 +30,11 @@ int main()
 
     return 0;
 }
+/**
+ * @brief creates, calcultaes, and formats the multiplication table. 
+ * @param maxDigit - the highest digit from user input. 
+ * @return None (void). 
+ */
 void printMultiplicationTable(int maxDigit)
 {
     for (int i = 1; i <= maxDigit; i++)
@@ -36,6 +46,11 @@ void printMultiplicationTable(int maxDigit)
         cout << endl;
     }
 }
+/**
+ * @brief Ask for user input and checks validity. 
+ * @param None
+ * @return A valid interger for max digit. 
+ */
 int getMaxDigitInput()
 {
     cin >> maxDigit;
@@ -44,6 +59,11 @@ int getMaxDigitInput()
     // still need to add condition for non integer values
     isMaxDigitValid(maxDigit);
 }
+/**
+ * @brief Checks the users input to validate the interger between the 4 and 10 range. 
+ * @param maxDigit - User provided interger
+ * @return true if the input is inbetween 4 and 10, false otherwise. 
+ */
 bool isMaxDigitValid(int maxDigit)
 {
     while (maxDigit <= 4 || maxDigit >= 10)
@@ -53,6 +73,11 @@ bool isMaxDigitValid(int maxDigit)
         cin >> maxDigit;
     }
 }
+/**
+ * @brief Error message regarding users input. 
+ * @param None
+ * @return None (void)
+ */
 void printInputValidationError()
 {
     cout << "Error: The max digit must be greater than 4 and less than 10. Please try again." << endl;
