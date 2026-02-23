@@ -15,11 +15,7 @@ int main()
   cout << "Please enter the maximum digit for the multiplication table." << endl;
   cout << "The digit must be greater than 4 and less than 10." << endl;
   cout << "Max Digit: ";
-  cin >> maxDigit;
-
-  //input validation loop
-  //still need to add condition for non integer values
-  isMaxDigitValid(maxDigit);
+  getMaxDigitInput(maxDigit);
 
   for (int i = 1; i <= maxDigit; i++) {
     for (int j = 1; j <= maxDigit; j++) {
@@ -29,6 +25,14 @@ int main()
   }
 
   return 0;
+}
+int getMaxDigitInput()
+{
+    cin >> maxDigit;
+
+    // input validation loop
+    // still need to add condition for non integer values
+    isMaxDigitValid(maxDigit);
 }
 bool isMaxDigitValid(int maxDigit)
 {
